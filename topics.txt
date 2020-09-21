@@ -4,6 +4,8 @@
 1. Introduction Quarkus
 -----------------------------------------------
 
+ - what,why & where
+
 -----------------------------------------------
 2. Scaffolding Quarkus Applications
 -----------------------------------------------
@@ -20,7 +22,7 @@
 
     https://code.quarkus.io/
 
- 4. Scaffolding a quarkus project using IDE ( VS code , Intelij IDEA, Eclipse )
+ 4. Scaffolding a quarkus project using IDE ( VS code , Intelij-IDEA, Eclipse )
        
 
 -----------------------------------------------
@@ -35,6 +37,66 @@
 -----------------------------------------------
 
 
------------------------------------------------
-5. Connfguring quarkus with Microprofile config sepc
------------------------------------------------
+ 1. simple rest-api endpoints
+ 2. extract request params
+ 3. using semantic HTTP response status codes
+ 4. binding custom HTTP methods
+ 5. Enabling cross-origin-resource-sharing ( cors )
+ 
+...
+
+
+-----------------------------------------------------
+5. Confguring quarkus with Microprofile config sepc
+----------------------------------------------------
+
+  1. configuring the application with custom properties
+
+  2. accessing configuration properties programmatically
+
+  3. overwriting configuration values externally
+
+        a. system properties    ( 500 )
+        b. environment variables ( 400 )
+
+  4. configuring with profiles
+
+       default profiles ==> dev,test & prod 
+
+  5. creating custom config sources 
+
+  ----------------------------------------------------------
+
+
+-----------------------------------------------------
+5. Quarkus - LOGS
+----------------------------------------------------
+
+
+  1. changing Logger configuration
+
+  2. Adding Application Logs
+
+
+      - JDK java.util.Logging
+      - Jboss Logging
+      - SL4J
+      - Apache common Logging
+
+3. Advaned Logging for centralized Logging Tools i.e ELK tools     
+
+
+
+
+
+-----------------------------------------------------------------------
+5. Quarkus - Micro profile CDI ( Context & Dependency Injection ) spec
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+6. Quarkus - Data ( SQL & No SQL )
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+7. Quarkus - Workshop
+-----------------------------------------------------------------------
