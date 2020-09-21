@@ -1,0 +1,80 @@
+
+
+
+--------------------------------------
+springboot
+--------------------------------------
+
+startup-time : 2.204 sec
+class loaded : 7k
+memory       : 548.8 MB
+
+-------------------------------------
+
+
+What does a traditional framework/server do at startup time? e.g springboot
+
+-> Parse config files
+-> Classpath & classes scanning
+-> For annotations, getters or other annotations
+-> Build framework metamodel objects
+-> Prepare reflection and build proxies
+-> Start and open IO, threads etc
+
+....
+
+
+
+--------------------------------------
+quarkus as JVM application
+--------------------------------------
+
+startup-time : 0.809s.
+class loaded : 5k
+memory       : 331.2 MB
+
+-------------------------------------
+
+
+
+
+
+--------------------------------------
+quarkus as Native application
+--------------------------------------
+
+startup-time : 0.018s
+memory       : 19.5 MB
+
+-------------------------------------
+
+
+
+
+
+-------------------------------------------
+quarkus as JVM application in docker container
+--------------------------------------------
+
+startup-time : 1.260s
+memory       : 111.5 MB
+
+-------------------------------------------
+
+
+
+-------------------------------------------
+quarkus as Native application in docker container
+--------------------------------------------
+
+startup-time : 0.030s
+memory       : 4.79m
+
+-------------------------------------------
+
+
+
+
+ 
+
+

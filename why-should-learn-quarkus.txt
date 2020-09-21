@@ -1,0 +1,16 @@
+
+
+----------------------------------------------------------------
+
+-> through build, yields more optimized byte-code for appln.
+-> very good support for native compilation
+-> Native Kubernetes support
+
+----------------------------------------------------------------
+
+-> based on best java lib
+-> Microprofile-spec based  for microservices , ..
+-> Powered by Vertx Reactive Engine
+-> quarkus + spring integrations
+
+----------------------------------------------------------------
