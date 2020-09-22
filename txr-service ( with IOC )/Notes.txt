@@ -1,0 +1,33 @@
+
+
+
+--------------------------------------------------------
+
+ use-case : txr(amount,"1","2")
+ 
+ --------------------------------------------------------
+ 
+ 
+ Model:
+ 
+ 	- Account
+ 	
+Layer(s):
+
+
+	- DataLayer    ( Persisting Logic ) 
+	
+		 1. AccountRepository
+		
+			- loadAccount(number)
+			- updateAccount(number)
+	
+	- ServiceLayer ( Processing Logic ) 	
+	
+		 2. TxrService
+		 
+		 	- txr(amount,"1","2")
+		 		
+--------------------------------------------------------		 		
+	
+	
