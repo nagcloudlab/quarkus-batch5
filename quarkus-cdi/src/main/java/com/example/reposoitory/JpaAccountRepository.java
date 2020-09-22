@@ -1,6 +1,7 @@
 package com.example.reposoitory;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Default;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
@@ -13,14 +14,15 @@ import io.quarkus.arc.DefaultBean;
 
 //@Singleton
 @ApplicationScoped
-//@Named("jdbc")
-@RepoQualifier(tech = "jdbc",dbType = "sql")
-public class JdbcAccountRepository implements AccountRepository {
+//@DefaultBean
+//@Named("jpa")
+@RepoQualifier(tech = "jpa",dbType = "sql")
+public class JpaAccountRepository implements AccountRepository {
 
 	private static Logger logger = Logger.getLogger("txr-service");
 
-	public JdbcAccountRepository() {
-		logger.info("JdbcAccountRepository instance created");
+	public JpaAccountRepository() {
+		logger.info("JpaAccountRepository instance created");
 	}
 
 	@Override
