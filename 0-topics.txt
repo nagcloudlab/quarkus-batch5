@@ -101,16 +101,17 @@
 9. Quarkus -   microservices using Microprofile specs
 ----------------------------------------------------
 
-
     - config 
     - open api
     - rest client
     - fault tolerence
 
+observability 
+ 
     - health
     - metrics
     - tracing
-    - JWT
+    
 
 
 
