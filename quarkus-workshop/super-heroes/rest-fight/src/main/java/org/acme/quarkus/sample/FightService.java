@@ -16,6 +16,8 @@ import org.acme.quarkus.sample.client.Hero;
 import org.acme.quarkus.sample.client.HeroService;
 import org.acme.quarkus.sample.client.Villain;
 import org.acme.quarkus.sample.client.VillainService;
+import org.eclipse.microprofile.faulttolerance.Fallback;
+import org.eclipse.microprofile.faulttolerance.Retry;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.jboss.logging.Logger;
 
@@ -103,34 +105,38 @@ public class FightService {
 		return fighters;
 	}
 
+	@Retry(maxRetries = 2,delay = 1000)
+	@Fallback(fallbackMethod = "fallbackRandomHero")
 	Hero findRandomHero() {
 		// external-service-call :
 		return heroService.findRandomHero(); // curl -X GET --headers "Accpet:application/json"  http://{host}:{port}/api/heries/random
 	}
 
+	@Retry(maxRetries = 2,delay = 1000)
+	@Fallback(fallbackMethod = "fallbackRandomVillain")
 	Villain findRandomVillain() {
 		// external-service-call
 		return villainService.findRandomVillain();
 	}
 
-//	public Hero fallbackRandomHero() {
-//		LOGGER.warn("Falling back on Hero");
-//		Hero hero = new Hero();
-//		hero.name = "Fallback hero";
-//		hero.picture = "https://dummyimage.com/280x380/1e8fff/ffffff&text=Fallback+Hero";
-//		hero.powers = "Fallback hero powers";
-//		hero.level = 1;
-//		return hero;
-//	}
+	public Hero fallbackRandomHero() {
+		LOGGER.warn("Falling back on Hero");
+		Hero hero = new Hero();
+		hero.name = "Fallback hero";
+		hero.picture = "https://dummyimage.com/280x380/1e8fff/ffffff&text=Fallback+Hero";
+		hero.powers = "Fallback hero powers";
+		hero.level = 1;
+		return hero;
+	}
 //
-//	public Villain fallbackRandomVillain() {
-//		LOGGER.warn("Falling back on Villain");
-//		Villain villain = new Villain();
-//		villain.name = "Fallback villain";
-//		villain.picture = "https://dummyimage.com/280x380/b22222/ffffff&text=Fallback+Villain";
-//		villain.powers = "Fallback villain powers";
-//		villain.level = 42;
-//		return villain;
-//	}
+	public Villain fallbackRandomVillain() {
+		LOGGER.warn("Falling back on Villain");
+		Villain villain = new Villain();
+		villain.name = "Fallback villain";
+		villain.picture = "https://dummyimage.com/280x380/b22222/ffffff&text=Fallback+Villain";
+		villain.powers = "Fallback villain powers";
+		villain.level = 42;
+		return villain;
+	}
 
 }
