@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>SSE with Quarkus</title>
+</head>
+<body>
+
+<div id="container">
+
+</div>
+
+<script type="text/javascript">
+
+if (!!window.EventSource) {
+    
+	var eventSource = new EventSource("/jaxrs-hello/greeting/5/ibm"); // SSE API
+    
+    eventSource.onmessage = function (event) {
+        var container = document.getElementById("container");
+        var paragraph = document.createElement("p");
+        paragraph.innerHTML = event.data;
+        container.appendChild(paragraph);
+    };
+} else {
+    window.alert("EventSource not available on this browser.")
+}
+
+</script>
+</body>
+</html>
