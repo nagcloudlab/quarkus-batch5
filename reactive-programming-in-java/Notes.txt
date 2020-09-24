@@ -1,0 +1,25 @@
+
+
+
+
+
+-----------------------------------------
+data/repository layer
+-----------------------------------------
+
+
+ - UserRepository
+ 
+ 	- findUser(id)
+
+-----------------------------------------
+service layer
+-----------------------------------------
+
+
+
+ - AuthService
+ 
+ 	- authenticate(username,password)
+ 	
+

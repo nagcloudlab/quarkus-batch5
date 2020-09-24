@@ -101,6 +101,8 @@
 9. Quarkus -   microservices using Microprofile specs
 ----------------------------------------------------
 
+core
+
     - config 
     - open api
     - rest client
@@ -111,7 +113,35 @@ observability
     - health
     - metrics
     - tracing
+
+ authentication
+
+   - JWT   
     
+----------------------------------------------------
+
+
+----------------------------------------------------
+9. Quarkus -   reactive programming
+----------------------------------------------------
+
+
+ -> what,why we need reactive programming
+ -> how to implement reactive programming in java using CompletableFuture
+ -> reactive programming libraries
+
+      - Rxjava
+      - Spring project reactor
+      - Vertx
+
+
+
+
+
+----------------------------------------------------
+10. Quarkus -  cloud
+----------------------------------------------------
+
 
 
 
