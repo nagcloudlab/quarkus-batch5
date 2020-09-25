@@ -149,11 +149,12 @@ observability
 11. Quarkus -  cloud
 ----------------------------------------------------
 
-   -> deployment on Kubernetes , Openshift   ( 2 hrs )
+   -> deployment on Kubernetes , Openshift
 
 ----------------------------------------------------
 12. Quarkus -  serverless Arch
 ----------------------------------------------------
+
 ----------------------------------------------------
 13. Quarkus -  Custom Extensions
 ----------------------------------------------------

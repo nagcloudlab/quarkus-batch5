@@ -1,0 +1,28 @@
+version: "3"
+services:
+    database:
+        image: "postgres:10.5"
+        container_name: "bank-database"
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./db-init/initialize-databases.sql:/docker-entrypoint-initdb.d/init.sql
+        networks:
+            - back-tier    
+    txr:
+        image: "nagabhushanamn/quarkus-txr-service:1.0.1"
+        container_name: "txr-service"
+        deploy:
+          replicas: 3
+        ports:
+            - "8080:8080"
+        depends_on:
+            -  "database"
+        networks:
+            - back-tier    
+            
+
+networks:
+  back-tier:            
+               
+               
