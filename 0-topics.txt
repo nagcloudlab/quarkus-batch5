@@ -138,12 +138,13 @@ observability
   -> Quarkus - Vertx & EventBus
 
 
-  -> Quarkus - Reactive Messaging ( within appln , AMQP, JMS , KAFKA )  
+  -> Quarkus - Reactive Messaging ( within appln , AMQP , KAFKA )  
   
 ----------------------------------------------------
 10. Quarkus -  Workshop
 ----------------------------------------------------
-   -> All in One        : 15min to 30Min
+   -> All in One        
+   
 ----------------------------------------------------
 11. Quarkus -  cloud
 ----------------------------------------------------
